@@ -3,7 +3,8 @@
     "player"
   ],
   "slots": [
-    "mainarm/sleeve",
-    "offarm/sleeve"
+    "hand/sleeve",
+    "offhand/sleeve",
+    "head/hat"
   ]
 }

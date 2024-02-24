@@ -82,6 +82,8 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         NukaSonicLanguageProvider provider = new NukaSonicLanguageProvider(output, languageType);
         provider.addTranslation(Nukasonic.NUKASONIC_ITEMS, "Nukasonic");
         provider.addTranslation(NukaItems.PIPBOY, "Pipboy");
+        provider.addTranslation("trinkets.slot.hand.sleeve", "Sleeve");
+        provider.addTranslation("trinkets.slot.offhand.sleeve", "Offhand Sleeve");
         return provider;
     }
 
