@@ -4,7 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class ClockBlock extends Block {
-    public ClockBlock(Item.Settings settings) {
+
+    public ClockBlock(Settings settings) {
         super(settings);
     }
 }
