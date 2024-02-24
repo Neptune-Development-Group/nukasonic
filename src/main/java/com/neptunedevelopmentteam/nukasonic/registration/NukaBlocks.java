@@ -9,5 +9,6 @@ import net.minecraft.block.Block;
 
 public class NukaBlocks implements NeptuneBlockInit {
     public static final Block CLOCK = new ClockBlock(NeptuneBlockSettings.create()
+            .solidBlock(null)
             .addItemSettings(new NeptuneItemSettings().group(() -> Nukasonic.NUKASONIC_ITEMS)));
 }
