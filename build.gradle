@@ -28,13 +28,12 @@ repositories {
 
 loom {
     runs {
-        // This adds a new gradle task that runs the datagen API
         datagen {
             inherit server
             name "Data Generation"
             vmArg "-Dfabric-api.datagen"
             vmArg "-Dfabric-api.datagen.output-dir=${file("src/main/generated")}"
-            vmArg "-Dfabric-api.datagen.modid=ait"
+            vmArg "-Dfabric-api.datagen.modid=nukasonic"
 
             runDir "build/datagen"
         }
@@ -45,7 +44,8 @@ sourceSets {
     main {
         resources {
             srcDirs += [
-                    'src/main/generated'
+                    'src/main/generated',
+                    'src/main/resources'
             ]
         }
     }
