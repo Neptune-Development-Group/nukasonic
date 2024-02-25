@@ -12,4 +12,8 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Nukasonic.MOD_ID, "clock_be"),
                     FabricBlockEntityTypeBuilder.create(ClockBlockEntity::new,
                             NukaBlocks.CLOCK).build());
+
+
 }
+
+

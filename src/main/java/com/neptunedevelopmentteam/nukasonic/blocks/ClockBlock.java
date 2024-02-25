@@ -38,4 +38,5 @@ public class ClockBlock extends BlockWithEntity implements BlockEntityProvider{
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return null;
     }
+
 }
