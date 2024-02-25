@@ -1,4 +1,4 @@
-package com.neptunedevelopmentteam.nukasonic.client.models;
+package com.neptunedevelopmentteam.nukasonic.blocks.models;
 
 import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
@@ -11,8 +11,8 @@ import net.minecraft.entity.Entity;
 // Paste this class into your mod and generate all required imports
 public class Clock extends EntityModel<Entity> {
 	private final ModelPart bone;
-	private final ModelPart bone2;
 	private final ModelPart bone3;
+	private final ModelPart bone2;
 	public Clock(ModelPart root) {
 		this.bone = root.getChild("bone");
 		this.bone2 = root.getChild("bone2");
@@ -22,11 +22,11 @@ public class Clock extends EntityModel<Entity> {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
 		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create().uv(0, 0).cuboid(-8.0F, -16.0F, -8.0F, 0.0F, 16.0F, 16.0F, new Dilation(0.0F))
-		.uv(0, 0).cuboid(-8.0F, -8.5F, -0.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
-		ModelPartData bone3 = modelPartData.addChild("bone3", ModelPartBuilder.create().uv(0, 0).cuboid(-7.8F, -8.5F, -4.0F, 0.0F, 1.0F, 4.0F, new Dilation(-0.001F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+				.uv(0, 0).cuboid(-8.0F, -8.5F, -0.5F, 1.0F, 1.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
-		ModelPartData bone2 = modelPartData.addChild("bone2", ModelPartBuilder.create().uv(0, 0).cuboid(0.0F, -0.5F, 0.0F, 0.0F, 1.0F, 6.0F, new Dilation(-0.001F)), ModelTransform.of(-7.5F, -8.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
+		ModelPartData bone3 = bone.addChild("bone3", ModelPartBuilder.create().uv(0, 0).cuboid(0.0F, -0.5F, -4.0F, 0.0F, 1.0F, 4.0F, new Dilation(-0.001F)), ModelTransform.pivot(-7.8F, -8.0F, 0.0F));
 
+		ModelPartData bone2 = bone.addChild("bone2", ModelPartBuilder.create().uv(0, 0).cuboid(0.0F, -0.5F, 0.0F, 0.0F, 1.0F, 6.0F, new Dilation(-0.001F)), ModelTransform.of(-7.5F, -8.0F, 0.0F, 1.5708F, 0.0F, 0.0F));
 		return TexturedModelData.of(modelData, 32, 32);
 	}
 	@Override

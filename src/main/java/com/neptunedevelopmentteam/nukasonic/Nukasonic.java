@@ -8,6 +8,7 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Nukasonic implements ModInitializer {
@@ -17,8 +18,11 @@ public class Nukasonic implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.log(Level.INFO , "Registering NukaItems");
         NeptuneInitHandler.register(NukaItems.class, MOD_ID);
+        LOGGER.log(Level.INFO , "Registering NukaBlocks");
         NeptuneInitHandler.register(NukaBlocks.class, MOD_ID);
+        LOGGER.log(Level.INFO , "Initializing Nukasonic Item Group");
         NUKASONIC_ITEMS.initialize();
     }
 }

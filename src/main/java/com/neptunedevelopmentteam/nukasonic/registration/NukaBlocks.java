@@ -6,9 +6,12 @@ import com.neptunedevelopmentteam.neptunelib.core.itemsettings.NeptuneItemSettin
 import com.neptunedevelopmentteam.nukasonic.Nukasonic;
 import com.neptunedevelopmentteam.nukasonic.blocks.ClockBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockWithEntity;
 
 public class NukaBlocks implements NeptuneBlockInit {
     public static final Block CLOCK = new ClockBlock(NeptuneBlockSettings.create()
             .solidBlock(null)
-            .addItemSettings(new NeptuneItemSettings().group(() -> Nukasonic.NUKASONIC_ITEMS)));
+            .addItemSettings(new NeptuneItemSettings().group(() -> Nukasonic.NUKASONIC_ITEMS))
+
+    );
 }
