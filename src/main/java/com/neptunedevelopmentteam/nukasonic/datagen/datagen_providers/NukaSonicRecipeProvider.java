@@ -44,7 +44,7 @@ public class NukaSonicRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, NukaItems.STIMPAK)
                 .pattern("IBI").pattern("IGI").pattern(" S ")
-                .input('I', Items.IRON_NUGGET).input('B', Items.GLASS_BOTTLE).input('B', ItemTags.BUTTONS).input('S', NukaItems.SYRINGE)
+                .input('I', Items.IRON_NUGGET).input('G', Items.GLASS_BOTTLE).input('B', ItemTags.BUTTONS).input('S', NukaItems.SYRINGE)
                 .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
                 .criterion(hasItem(NukaItems.SYRINGE), conditionsFromItem(NukaItems.SYRINGE))
                 .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
