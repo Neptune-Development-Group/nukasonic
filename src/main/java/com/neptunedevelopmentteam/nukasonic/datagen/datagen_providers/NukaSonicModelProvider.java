@@ -1,5 +1,6 @@
 package com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers;
 
+import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
@@ -35,7 +36,7 @@ public class NukaSonicModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-
+        itemModelGenerator.register(NukaItems.STIMPAK, Models.GENERATED);
     }
 
     public void registerDirectionalBlock(Block block) {

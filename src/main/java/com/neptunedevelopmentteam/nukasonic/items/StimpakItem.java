@@ -15,12 +15,15 @@ public class StimpakItem extends Item {
     }
 
     public TypedActionResult use(World world, PlayerEntity user, Hand hand) {
+
+        //TODO: Add a slight glow to the edge of the screen to indicate using a stimpak
+
         ItemStack itemStack = user.getStackInHand(hand);
         if (user.getHealth() >= 20) {
             return TypedActionResult.fail(itemStack);
         }
         else {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 2));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 3));
             return TypedActionResult.consume(itemStack);
         }
 

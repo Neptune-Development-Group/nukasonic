@@ -1,11 +1,15 @@
 package com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers;
 
+import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.SmithingTransformRecipeJsonBuilder;
+import net.minecraft.item.Items;
+import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.ArrayList;
@@ -37,6 +41,14 @@ public class NukaSonicRecipeProvider extends FabricRecipeProvider {
         smithingTransformRecipes.forEach((smithingTransformRecipeJsonBuilder, identifier) -> {
             smithingTransformRecipeJsonBuilder.offerTo(exporter, identifier);
         });
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, NukaItems.STIMPAK)
+                .pattern("IBI").pattern("IGI").pattern(" S ")
+                .input('I', Items.IRON_NUGGET).input('B', Items.GLASS_BOTTLE).input('B', ItemTags.BUTTONS).input('S', NukaItems.SYRINGE)
+                .criterion(hasItem(Items.GLASS_BOTTLE), conditionsFromItem(Items.GLASS_BOTTLE))
+                .criterion(hasItem(NukaItems.SYRINGE), conditionsFromItem(NukaItems.SYRINGE))
+                .criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))
+                .offerTo(exporter, new Identifier(getRecipeName(NukaItems.STIMPAK)));
     }
 
     public void addShapelessRecipe(ShapelessRecipeJsonBuilder builder) {
