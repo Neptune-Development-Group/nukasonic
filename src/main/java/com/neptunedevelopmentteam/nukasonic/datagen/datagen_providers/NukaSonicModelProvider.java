@@ -36,7 +36,6 @@ public class NukaSonicModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(NukaItems.STIMPAK, Models.GENERATED);
     }
 
     public void registerDirectionalBlock(Block block) {
