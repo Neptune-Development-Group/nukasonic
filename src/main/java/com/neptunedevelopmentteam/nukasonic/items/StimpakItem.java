@@ -23,7 +23,7 @@ public class StimpakItem extends Item {
             return TypedActionResult.fail(itemStack);
         }
         else {
-            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 3));
+            user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 2));
             return TypedActionResult.consume(itemStack);
         }
 
