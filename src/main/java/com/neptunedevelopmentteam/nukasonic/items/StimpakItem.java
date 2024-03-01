@@ -24,6 +24,7 @@ public class StimpakItem extends Item {
         }
         else {
             user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 2));
+            itemStack.decrement(1);
             return TypedActionResult.consume(itemStack);
         }
 
