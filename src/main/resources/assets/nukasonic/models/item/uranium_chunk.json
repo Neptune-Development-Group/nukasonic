@@ -1,4 +1,5 @@
 {
+  "parent": "item/generated",
   "texture_size": [16, 16],
   "textures": {
     "layer0": "nukasonic:item/uranium_chunk"
