@@ -85,7 +85,7 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         provider.addTranslation(NukaItems.PIPBOY, "Pipboy");
         provider.addTranslation(NukaItems.STIMPAK, "Stimpak");
         provider.addTranslation(NukaItems.SYRINGE, "Syringe");
-        provider.addTranslation(NukaBlocks.URANIUM, "Uranium Block");
+        provider.addTranslation(NukaBlocks.URANIUM_ORE, "Uranium Block");
         provider.addTranslation(NukaItems.URANIUM_CHUNK, "Uranium Chunk");
         provider.addTranslation("trinkets.slot.hand.sleeve", "Sleeve");
         provider.addTranslation("trinkets.slot.offhand.sleeve", "Offhand Sleeve");
