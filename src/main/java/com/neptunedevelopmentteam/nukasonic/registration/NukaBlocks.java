@@ -8,6 +8,6 @@ import net.minecraft.block.Block;
 public class NukaBlocks implements NeptuneBlockInit {
 
     public static final Block URANIUM = new Block(NeptuneBlockSettings.create());
-
+    public static final Block BEANS = new Block(NeptuneBlockSettings.create());
 
 }
