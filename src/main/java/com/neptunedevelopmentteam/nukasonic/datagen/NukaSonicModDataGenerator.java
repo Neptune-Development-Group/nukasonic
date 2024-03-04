@@ -5,6 +5,7 @@ import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicL
 import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicModelProvider;
 import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicRecipeProvider;
 import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicSoundProvider;
+import com.neptunedevelopmentteam.nukasonic.registration.NukaBlocks;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
@@ -84,6 +85,7 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         provider.addTranslation(NukaItems.PIPBOY, "Pipboy");
         provider.addTranslation(NukaItems.STIMPAK, "Stimpak");
         provider.addTranslation(NukaItems.SYRINGE, "Syringe");
+        provider.addTranslation(NukaBlocks.URANIUM, "Uranium Block");
         provider.addTranslation(NukaItems.URANIUM_CHUNK, "Uranium Chunk");
         provider.addTranslation("trinkets.slot.hand.sleeve", "Sleeve");
         provider.addTranslation("trinkets.slot.offhand.sleeve", "Offhand Sleeve");
