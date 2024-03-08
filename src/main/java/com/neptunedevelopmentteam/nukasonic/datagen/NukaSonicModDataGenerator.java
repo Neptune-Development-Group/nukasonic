@@ -1,10 +1,7 @@
 package com.neptunedevelopmentteam.nukasonic.datagen;
 
 import com.neptunedevelopmentteam.nukasonic.Nukasonic;
-import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicLanguageProvider;
-import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicModelProvider;
-import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicRecipeProvider;
-import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.NukaSonicSoundProvider;
+import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.*;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaBlocks;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -26,6 +23,7 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         generateSoundData(pack);
         generateAdvancements(pack);
         generateLoot(pack);
+        generateWorldGen(pack);
     }
 
     public void generateLoot(FabricDataGenerator.Pack pack) {
@@ -59,6 +57,13 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(((output, registriesFuture) -> {
             NukaSonicModelProvider aitModelProvider = new NukaSonicModelProvider(output);
             return aitModelProvider;
+        }));
+    }
+
+    public void generateWorldGen(FabricDataGenerator.Pack pack) {
+        pack.addProvider(((output, registriesFuture) -> {
+            NukaSonicWorldGenProvider aitWorldGenProvider = new NukaSonicWorldGenProvider(output, registriesFuture);
+            return aitWorldGenProvider;
         }));
     }
 
