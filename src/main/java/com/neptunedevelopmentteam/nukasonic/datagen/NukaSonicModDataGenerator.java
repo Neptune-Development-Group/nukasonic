@@ -4,9 +4,13 @@ import com.neptunedevelopmentteam.nukasonic.Nukasonic;
 import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.*;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaBlocks;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
+import com.neptunedevelopmentteam.nukasonic.world.ModConfiguredFeatures;
+import com.neptunedevelopmentteam.nukasonic.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -23,7 +27,7 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         generateSoundData(pack);
         generateAdvancements(pack);
         generateLoot(pack);
-        generateWorldGen(pack);
+        pack.addProvider(NukaSonicWorldGenProvider::new);
     }
 
     public void generateLoot(FabricDataGenerator.Pack pack) {
@@ -60,12 +64,10 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
         }));
     }
 
-    public void generateWorldGen(FabricDataGenerator.Pack pack) {
-        pack.addProvider(((output, registriesFuture) -> {
-            NukaSonicWorldGenProvider aitWorldGenProvider = new NukaSonicWorldGenProvider(output, registriesFuture);
-            return aitWorldGenProvider;
-        }));
-    }
+        public void buildRegistry(RegistryBuilder registryBuilder){
+            registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
+            registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
+        }
 
     public void generateLanguages(FabricDataGenerator.Pack pack) {
         generate_EN_US_Language(pack); // en_us (English US)
