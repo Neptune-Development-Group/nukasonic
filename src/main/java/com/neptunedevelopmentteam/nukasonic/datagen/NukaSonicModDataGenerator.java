@@ -59,8 +59,8 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
 
     public void generateBlockModels(FabricDataGenerator.Pack pack) {
         pack.addProvider(((output, registriesFuture) -> {
-            NukaSonicModelProvider aitModelProvider = new NukaSonicModelProvider(output);
-            return aitModelProvider;
+            NukaSonicModelProvider nukaSonicModelProvider = new NukaSonicModelProvider(output);
+            return nukaSonicModelProvider;
         }));
     }
 
