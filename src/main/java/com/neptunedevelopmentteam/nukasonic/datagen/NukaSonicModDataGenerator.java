@@ -51,7 +51,7 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
     public void generateSoundData(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
             NukaSonicSoundProvider provider = new NukaSonicSoundProvider(output);
-            provider.addSound("stimpack_use", NukaSounds.STIMPACK_USE_SOUND);
+            provider.addSound("stimpak_use", NukaSounds.STIMPAK_USE_SOUND);
             return provider;
         })));
     }

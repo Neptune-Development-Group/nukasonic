@@ -20,6 +20,7 @@ public class Nukasonic implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        LOGGER.info("Initializing Nukasonic");
         NeptuneInitHandler.register(NukaItems.class, MOD_ID);
         NeptuneInitHandler.register(NukaBlocks.class, MOD_ID);
         NeptuneInitHandler.register(NukaSounds.class, MOD_ID);
