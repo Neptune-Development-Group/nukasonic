@@ -12,6 +12,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class StimpakItem extends Item {
@@ -19,10 +20,9 @@ public class StimpakItem extends Item {
         super(settings);
     }
 
-    public TypedActionResult use(World world, PlayerEntity user, Hand hand) {
 
-        //TODO: Add a slight glow to the edge of the screen to indicate using a stimpak
-
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 2));
         itemStack.decrement(1);
