@@ -4,6 +4,7 @@ import com.neptunedevelopmentteam.nukasonic.Nukasonic;
 import com.neptunedevelopmentteam.nukasonic.datagen.datagen_providers.*;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaBlocks;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
+import com.neptunedevelopmentteam.nukasonic.registration.NukaSounds;
 import com.neptunedevelopmentteam.nukasonic.world.ModConfiguredFeatures;
 import com.neptunedevelopmentteam.nukasonic.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -50,6 +51,7 @@ public class NukaSonicModDataGenerator implements DataGeneratorEntrypoint {
     public void generateSoundData(FabricDataGenerator.Pack pack) {
         pack.addProvider((((output, registriesFuture) -> {
             NukaSonicSoundProvider provider = new NukaSonicSoundProvider(output);
+            provider.addSound("stimpack_use", NukaSounds.STIMPACK_USE_SOUND);
             return provider;
         })));
     }
