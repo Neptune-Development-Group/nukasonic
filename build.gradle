@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.5-SNAPSHOT'
+    id 'fabric-loom' version '1.6-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -61,7 +61,6 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     modImplementation "com.github.Neptune-Development-Group:neptunelib:${project.neptunelib_version}" // NeptuneLib is made by Creativious DM him on discord if you have a problem
-    modImplementation "dev.emi:trinkets:${trinkets_version}"
 
     include "com.github.Neptune-Development-Group:neptunelib:${project.neptunelib_version}" // NeptuneLib is made by Creativious DM him on discord if you have a problem
 }
@@ -71,7 +70,6 @@ processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
     inputs.property "loader_version", project.loader_version
-    inputs.property "trinkets_version", trinkets_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
