@@ -8,5 +8,5 @@ import net.minecraft.block.Block;
 
 
 public class NukaBlocks implements NeptuneBlockInit {
-    public static final Block URANIUM_ORE = new Block(NeptuneBlockSettings.create().addItemSettings(new NeptuneItemSettings().group(() -> Nukasonic.NUKASONIC_ITEMS)).hardness(3));
+    public static final Block URANIUM_ORE = new Block(NeptuneBlockSettings.create().addItemSettings(new NeptuneItemSettings().group(() -> Nukasonic.NUKASONIC_ITEMS)).hardness(3).getSettings());
 }

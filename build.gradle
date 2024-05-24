@@ -7,10 +7,6 @@ version = project.mod_version
 group = project.maven_group
 
 repositories {
-    maven { url 'https://jitpack.io'
-        metadataSources {
-            artifact() //Look directly for artifact
-        }}
     maven {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
@@ -19,6 +15,22 @@ repositories {
         name = "Ladysnake Libs"
         url = 'https://maven.ladysnake.org/releases'
     }
+    maven {
+        name = "Neptunelib"
+        url = uri("https://maven.pkg.github.com/Neptune-Development-Group/neptunelib")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
+        metadataSources {
+            artifact() //Look directly for artifact
+        }
+    }
+
+        maven { url 'https://jitpack.io' // we have jitpack just in case it's not us compiling the project
+        metadataSources {
+            artifact() //Look directly for artifact
+        }}
     // Add repositories to retrieve artifacts from in here.
     // You should only use this when depending on other mods because
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
@@ -60,9 +72,9 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation "com.github.Neptune-Development-Group:neptunelib:${project.neptunelib_version}" // NeptuneLib is made by Creativious DM him on discord if you have a problem
+    modImplementation "com.neptunedevelopmentteam:neptunelib:${project.neptunelib_version}" // NeptuneLib is made by Creativious DM him on discord if you have a problem
 
-    include "com.github.Neptune-Development-Group:neptunelib:${project.neptunelib_version}" // NeptuneLib is made by Creativious DM him on discord if you have a problem
+    include "com.neptunedevelopmentteam:neptunelib:${project.neptunelib_version}" // NeptuneLib is made by Creativious DM him on discord if you have a problem
 }
 
 processResources {
@@ -75,8 +87,7 @@ processResources {
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
-                "loader_version": project.loader_version,
-                "trinkets_version": trinkets_version
+                "loader_version": project.loader_version
     }
 }
 

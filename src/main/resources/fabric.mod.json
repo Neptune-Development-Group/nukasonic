@@ -23,7 +23,7 @@
       "com.neptunedevelopmentteam.nukasonic.Nukasonic"
     ],
     "fabric-datagen": [
-      "com.neptunedevelopmentteam.nukasonic.datagen.NukaSonicModDataGenerator"
+      "com.neptunedevelopmentteam.nukasonic.NukasonicDataGenerator"
     ]
   },
   "mixins": [

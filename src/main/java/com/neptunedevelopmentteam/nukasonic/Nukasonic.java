@@ -4,8 +4,8 @@ import com.neptunedevelopmentteam.neptunelib.core.init_handlers.NeptuneInitHandl
 import com.neptunedevelopmentteam.neptunelib.core.itemgroup.NeptuneItemGroup;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaBlocks;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
+import com.neptunedevelopmentteam.nukasonic.registration.NukaOres;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaSounds;
-import com.neptunedevelopmentteam.nukasonic.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -24,7 +24,7 @@ public class Nukasonic implements ModInitializer {
         NeptuneInitHandler.register(NukaItems.class, MOD_ID);
         NeptuneInitHandler.register(NukaBlocks.class, MOD_ID);
         NeptuneInitHandler.register(NukaSounds.class, MOD_ID);
+        NeptuneInitHandler.registerCustom(NukaOres.class, MOD_ID);
         NUKASONIC_ITEMS.initialize();
-        ModWorldGeneration.generateModWorldGen();
     }
 }
