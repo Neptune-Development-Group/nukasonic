@@ -13,7 +13,7 @@ public class NukaOres implements NeptuneOreInit {
             -50,
             3,
             2,
-            0.35f
+            0.5f
     );
 
     public static final NeptuneOre DEEPSLATE_URANIUM_ORE = NeptuneOre.createDeepslateOverworldOre(
@@ -23,6 +23,6 @@ public class NukaOres implements NeptuneOreInit {
             -50,
             7,
             5,
-            0.5f
+            0.1f
     );
 }
