@@ -47,11 +47,11 @@ public abstract class GunItem extends Item implements GunInterface, NeptuneItemD
     }
 
     public void setAmmoCount(ItemStack stack, int count) {
-        this.setStackData(stack, Nukasonic.AMMO_COUNT, count);
+        this.setStackData(stack, GunDataTypes.AMMO_COUNT, count);
     }
 
     public int getAmmoCount(ItemStack stack) {
-        return this.getOrCreateStackData(stack, Nukasonic.AMMO_COUNT);
+        return this.getOrCreateStackData(stack, GunDataTypes.AMMO_COUNT);
     }
 
 
