@@ -64,5 +64,11 @@ public class NukasonicDataGenerator extends NeptuneDataGenerator {
 
         english_translation = new NeptuneTranslation(NeptuneLanguages.English, "Stimpak Use");
         this.addTranslation(NukaSounds.STIMPAK_USE_SOUND, english_translation);
+
+        english_translation = new NeptuneTranslation(NeptuneLanguages.English, "10mm Gun");
+        this.addTranslation(NukaItems.TEN_MM_GUN, english_translation);
+
+        english_translation = new NeptuneTranslation(NeptuneLanguages.English, "Ammo: %d / %d");
+        this.addTranslation("nukasonic.item.tooltip.ammo", english_translation);
     }
 }
