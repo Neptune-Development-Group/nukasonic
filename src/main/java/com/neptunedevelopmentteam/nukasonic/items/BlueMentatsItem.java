@@ -11,13 +11,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class BlueMentatsItem extends Item {
-    public BlueMentatsItem(Settings settings) {
+    public BlueMentatsItem(net.minecraft.item.Item.Settings settings) {
         super(settings);
-    }
-    public TypedActionResult use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
-        //user.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 6000, 1));
-
-        return TypedActionResult.success(itemStack);
     }
 }

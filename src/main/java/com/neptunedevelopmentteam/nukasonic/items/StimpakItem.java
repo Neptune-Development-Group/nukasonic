@@ -12,7 +12,7 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
 public class StimpakItem extends Item {
-    public StimpakItem(Settings settings) {
+    public StimpakItem(net.minecraft.item.Item.Settings settings) {
         super(settings);
     }
 

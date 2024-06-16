@@ -20,7 +20,7 @@ public class Nukasonic implements ModInitializer {
     public static final String MOD_ID = "nukasonic";
     public static final Logger LOGGER = Logger.getLogger(MOD_ID);
 
-    public static final NeptuneItemGroup NUKASONIC_ITEMS = new NeptuneItemGroup(new Identifier(MOD_ID, "nukasonic_items"), new ItemStack(NukaItems.PIPBOY));
+    public static final NeptuneItemGroup NUKASONIC_ITEMS = new NeptuneItemGroup(Identifier.of(MOD_ID, "nukasonic_items"), new ItemStack(NukaItems.PIPBOY));
 
     @Override
     public void onInitialize() {

@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 
 public class NukaOres implements NeptuneOreInit {
     public static final NeptuneOre URANIUM_ORE = NeptuneOre.createStoneOverworldOre(
-            new Identifier(Nukasonic.MOD_ID, "uranium_ore"),
+            Identifier.of(Nukasonic.MOD_ID, "uranium_ore"),
             NukaBlocks.URANIUM_ORE,
             50,
             -50,
@@ -17,7 +17,7 @@ public class NukaOres implements NeptuneOreInit {
     );
 
     public static final NeptuneOre DEEPSLATE_URANIUM_ORE = NeptuneOre.createDeepslateOverworldOre(
-            new Identifier(Nukasonic.MOD_ID, "deepslate_uranium_ore"),
+            Identifier.of(Nukasonic.MOD_ID, "deepslate_uranium_ore"),
             NukaBlocks.URANIUM_ORE, // Add a deepslate variant here
             50,
             -50,

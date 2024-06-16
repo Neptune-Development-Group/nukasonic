@@ -3,10 +3,10 @@ package com.neptunedevelopmentteam.nukasonic.guns;
 import com.neptunedevelopmentteam.neptunelib.interfaces.NeptuneItemDataImpl;
 import com.neptunedevelopmentteam.nukasonic.Nukasonic;
 import net.fabricmc.fabric.api.attachment.v1.AttachmentTarget;
-import net.minecraft.client.item.TooltipType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.MutableText;
 import net.minecraft.text.Text;
@@ -19,7 +19,7 @@ import java.util.List;
 
 public abstract class GunItem extends Item implements GunInterface, NeptuneItemDataImpl {
     private GunMagazine magazine;
-    public GunItem(Settings settings, GunMagazine magazine) {
+    public GunItem(net.minecraft.item.Item.Settings settings, GunMagazine magazine) {
         super(settings);
         this.magazine = magazine;
     }

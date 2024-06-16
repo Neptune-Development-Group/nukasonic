@@ -7,5 +7,5 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
 public class NukaSounds implements NeptuneSoundEventInit {
-    public static final NeptuneSound STIMPAK_USE_SOUND = new NeptuneSound(new Identifier(Nukasonic.MOD_ID, "stimpak_use"), new Identifier(Nukasonic.MOD_ID, "stimpak_use"));
+    public static final NeptuneSound STIMPAK_USE_SOUND = new NeptuneSound(Identifier.of(Nukasonic.MOD_ID, "stimpak_use"), Identifier.of(Nukasonic.MOD_ID, "stimpak_use"));
 }
