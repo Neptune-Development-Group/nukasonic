@@ -2,8 +2,9 @@ package com.neptunedevelopmentteam.nukasonic;
 
 import com.neptunedevelopmentteam.neptunelib.core.easydata.NeptuneDataRegistry;
 import com.neptunedevelopmentteam.neptunelib.core.easydata.NeptuneDataType;
-import com.neptunedevelopmentteam.neptunelib.core.init_handlers.NeptuneInitHandler;
 import com.neptunedevelopmentteam.neptunelib.core.itemgroup.NeptuneItemGroup;
+import com.neptunedevelopmentteam.neptunelib.core.registration.NeptuneItemRegistrationType;
+import com.neptunedevelopmentteam.neptunelib.core.registration.NeptuneRegistrationManager;
 import com.neptunedevelopmentteam.nukasonic.guns.GunDataTypes;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaBlocks;
 import com.neptunedevelopmentteam.nukasonic.registration.NukaItems;
@@ -25,11 +26,7 @@ public class Nukasonic implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("Initializing Nukasonic");
-        NeptuneInitHandler.register(NukaItems.class, MOD_ID);
-        NeptuneInitHandler.register(NukaBlocks.class, MOD_ID);
-        NeptuneInitHandler.register(NukaSounds.class, MOD_ID);
-        NeptuneInitHandler.registerCustom(NukaOres.class, MOD_ID);
-        NeptuneInitHandler.registerCustom(GunDataTypes.class, MOD_ID);
+        NeptuneRegistrationManager.setup(MOD_ID, NukaItems.class, NukaBlocks.class, NukaSounds.class, NukaOres.class, GunDataTypes.class);
         NUKASONIC_ITEMS.initialize();
     }
 }

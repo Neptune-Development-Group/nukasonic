@@ -25,7 +25,6 @@ public class NukasonicDataGenerator extends NeptuneDataGenerator {
     @Override
     public void onInit() {
         handleRecipes();
-        handleSounds();
         handleTranslations();
     }
 
@@ -37,10 +36,6 @@ public class NukasonicDataGenerator extends NeptuneDataGenerator {
         this.addRecipe(recipe);
 
 
-    }
-
-    public void handleSounds() {
-        this.addSound(NukaSounds.STIMPAK_USE_SOUND);
     }
 
     public void handleTranslations() {
